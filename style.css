@@ -366,3 +366,75 @@
 .register-btn:hover {
   background: #007777;
 }
+/* Чекбокс согласия с политикой конфиденциальности */
+
+.checkbox-field {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d7dee7;
+    border-radius: 8px;
+
+    background: #f8fafc;
+}
+
+
+/* Сам квадрат для галочки */
+
+.checkbox-field input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    min-width: 20px;
+    min-height: 20px;
+
+    margin: 1px 0 0;
+
+    border: 2px solid #7b8794;
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+/* Когда поставили галочку */
+
+.checkbox-field input[type="checkbox"]:checked {
+    background: #1f5f8b;
+    border-color: #1f5f8b;
+}
+
+
+/* Галочка внутри квадрата */
+
+.checkbox-field input[type="checkbox"]:checked::after {
+    content: "✓";
+
+    position: absolute;
+
+    left: 3px;
+    top: -3px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* Текст рядом */
+
+.checkbox-field span {
+    line-height: 1.55;
+}
