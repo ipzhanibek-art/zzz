@@ -1,110 +1,257 @@
 let currentStep = 1;
 
+
+/* =========================
+   ПОКАЗАТЬ НУЖНЫЙ ШАГ
+========================= */
+
 function showStep(step) {
-  document.querySelectorAll(".form-step").forEach(item => {
-    item.classList.remove("active-step");
-  });
 
-  const formStep = document.querySelector(`#form-step-${step}`);
 
-  if (formStep) {
-    formStep.classList.add("active-step");
-  }
+    // Скрываем все шаги
 
-  document.querySelectorAll(".step").forEach(item => {
-    item.classList.remove("active");
-  });
+    document
+        .querySelectorAll(".form-step")
+        .forEach(item => {
 
-  for (let i = 1; i <= step; i++) {
-    const indicator = document.querySelector(`#step-indicator-${i}`);
+            item.classList.remove("active-step");
 
-    if (indicator) {
-      indicator.classList.add("active");
+        });
+
+
+
+    // Показываем нужный шаг
+
+    const formStep =
+        document.querySelector(`#form-step-${step}`);
+
+
+    if (formStep) {
+
+        formStep.classList.add("active-step");
+
     }
-  }
 
-  currentStep = step;
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+
+    // Убираем активность со всех индикаторов
+
+    document
+        .querySelectorAll(".step")
+        .forEach(item => {
+
+            item.classList.remove("active");
+
+        });
+
+
+
+    // Активируем текущий и предыдущие шаги
+
+    for (let i = 1; i <= step; i++) {
+
+
+        const indicator =
+            document.querySelector(
+                `#step-indicator-${i}`
+            );
+
+
+        if (indicator) {
+
+            indicator.classList.add("active");
+
+        }
+
+    }
+
+
+
+    currentStep = step;
+
+
+
+    // Прокрутка вверх
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+
 }
 
+
+
+/* =========================
+   СЛЕДУЮЩИЙ ШАГ
+========================= */
 
 function nextStep(step) {
-  const currentFormStep =
-    document.querySelector(`#form-step-${step}`);
-
-  if (!currentFormStep) return;
-
-  const requiredFields =
-    currentFormStep.querySelectorAll("[required]");
-
-  for (const field of requiredFields) {
-
-    if (!field.checkValidity()) {
-      field.reportValidity();
-      return;
-    }
-
-  }
 
 
-  if (step === 1) {
-
-    const passwordField =
-      document.querySelector('[name="password"]');
-
-    const confirmPasswordField =
-      document.querySelector('[name="confirmPassword"]');
-
-
-    if (
-      passwordField &&
-      confirmPasswordField &&
-      passwordField.value !== confirmPasswordField.value
-    ) {
-
-      alert("Пароли не совпадают.");
-
-      return;
-
-    }
-
-  }
-
-
-  showStep(step + 1);
-}
-
-
-function previousStep(step) {
-  showStep(step - 1);
-}
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const registrationForm =
-    document.getElementById("registrationForm");
-
-
-  if (registrationForm) {
-
-    registrationForm.addEventListener(
-      "submit",
-      function (event) {
-
-        event.preventDefault();
-
-        alert(
-          "Регистрация завершена! На вашу электронную почту будет отправлено письмо для подтверждения аккаунта."
+    const currentFormStep =
+        document.querySelector(
+            `#form-step-${step}`
         );
 
-      }
-    );
 
-  }
+    if (!currentFormStep) {
 
-});
+        return;
+
+    }
+
+
+
+    // Проверяем обязательные поля
+
+    const requiredFields =
+        currentFormStep.querySelectorAll(
+            "[required]"
+        );
+
+
+    for (const field of requiredFields) {
+
+
+        if (!field.checkValidity()) {
+
+
+            field.reportValidity();
+
+
+            return;
+
+        }
+
+
+    }
+
+
+
+    // Проверка совпадения паролей
+
+    if (step === 1) {
+
+
+        const passwordField =
+            document.querySelector(
+                '[name="password"]'
+            );
+
+
+        const confirmPasswordField =
+            document.querySelector(
+                '[name="confirmPassword"]'
+            );
+
+
+
+        if (
+
+            passwordField &&
+            confirmPasswordField &&
+
+            passwordField.value !==
+            confirmPasswordField.value
+
+        ) {
+
+
+            alert(
+                "Пароли не совпадают."
+            );
+
+
+            return;
+
+        }
+
+
+    }
+
+
+
+    // Переходим дальше
+
+    showStep(step + 1);
+
+
+}
+
+
+
+/* =========================
+   ПРЕДЫДУЩИЙ ШАГ
+========================= */
+
+function previousStep(step) {
+
+
+    showStep(step - 1);
+
+
+}
+
+
+
+/* =========================
+   ОТПРАВКА РЕГИСТРАЦИИ
+========================= */
+
+document.addEventListener(
+
+    "DOMContentLoaded",
+
+    () => {
+
+
+        const registrationForm =
+            document.getElementById(
+                "registrationForm"
+            );
+
+
+
+        if (!registrationForm) {
+
+            return;
+
+        }
+
+
+
+        registrationForm.addEventListener(
+
+            "submit",
+
+            function (event) {
+
+
+                event.preventDefault();
+
+
+
+                alert(
+
+                    "Регистрация успешно завершена!\n\n" +
+
+                    "На вашу электронную почту будет отправлено письмо " +
+
+                    "для подтверждения аккаунта."
+
+                );
+
+
+            }
+
+        );
+
+
+    }
+
+);
