@@ -438,3 +438,79 @@
 .checkbox-field span {
     line-height: 1.55;
 }
+/* ========================= */
+/* О ПЛАТФОРМЕ */
+/* ========================= */
+
+.about-platform {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px 70px;
+}
+
+
+.about-platform .section-title {
+    margin-bottom: 15px;
+}
+
+
+.about-platform .section-description {
+    max-width: 800px;
+    margin-bottom: 40px;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #5f6b78;
+}
+
+
+.about-block {
+    margin-bottom: 25px;
+
+    padding: 28px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e4e9ef;
+
+    border-radius: 10px;
+}
+
+
+.about-block h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+
+    font-size: 20px;
+}
+
+
+.about-block p {
+    margin: 0 0 14px;
+
+    line-height: 1.75;
+
+    color: #4d5966;
+}
+
+
+.about-block p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Телефон */
+
+@media (max-width: 768px) {
+
+    .about-platform {
+        padding: 30px 15px 45px;
+    }
+
+
+    .about-block {
+        padding: 22px 20px;
+    }
+
+}
