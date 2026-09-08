@@ -250,6 +250,39 @@ document.addEventListener(
             }
 
         );
+       function openLoginModal() {
+  document.getElementById("loginModal").classList.add("active");
+}
+
+function closeLoginModal() {
+  document.getElementById("loginModal").classList.remove("active");
+}
+
+
+function toggleLoginPassword() {
+
+  const password = document.getElementById("loginPassword");
+
+  if (password.type === "password") {
+    password.type = "text";
+  } else {
+    password.type = "password";
+  }
+
+}
+
+
+/* Закрытие при нажатии на фон */
+
+window.addEventListener("click", function(event) {
+
+  const modal = document.getElementById("loginModal");
+
+  if (event.target === modal) {
+    closeLoginModal();
+  }
+
+});
 
 
     }
