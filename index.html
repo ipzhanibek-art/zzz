@@ -1,152 +1,333 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Главная | MT Tender</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
-<!-- Окно входа -->
-<div id="loginModal" class="login-modal">
-  <div class="login-modal-content">
 
-    <button class="login-close" onclick="closeLoginModal()">×</button>
+<body>
 
-    <h2>Вход в личный кабинет</h2>
+  <!-- ШАПКА -->
+  <header>
+    <div class="topbar">
 
-    <div class="login-modal-grid">
+      <div class="brand">
+        <div class="logo">МТ</div>
 
-      <!-- Левая часть -->
-      <div class="login-form">
+        <div class="brand-text">
+          <h1>Международный тендерный портал</h1>
+          <p>Поиск и мониторинг международных закупок</p>
+        </div>
+      </div>
 
-        <input
-          type="text"
-          placeholder="Логин или email"
-          class="login-input"
-        >
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="tenders.html">Тендеры</a>
+        <a href="projects.html">Проекты</a>
+        <a href="organizations.html">Организации</a>
+        <a href="countries.html">Страны</a>
+        <a href="about.html">О платформе</a>
+      </nav>
 
-        <div class="password-row">
+      <div class="header-actions">
+
+        <!-- ОТКРЫВАЕТ ОКНО ВХОДА -->
+        <button class="login-btn" onclick="openLoginModal()">
+          Войти
+        </button>
+
+        <a href="register.html" class="register-btn">
+          Зарегистрироваться
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ГЛАВНЫЙ БЛОК -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="breadcrumb">
+        Главная
+      </div>
+
+      <h2>Международный тендерный портал</h2>
+
+      <p>
+        Поиск, анализ и мониторинг информации о закупках,
+        тендерах и международных проектах.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
+  <main>
+
+    <h2 class="section-title">
+      Добро пожаловать в MT Tender
+    </h2>
+
+    <p class="section-description">
+      MT Tender — международная платформа для поиска,
+      анализа и мониторинга тендеров, закупок и проектов.
+      Выберите нужный раздел в меню для поиска тендеров,
+      проектов, организаций и стран.
+    </p>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <div class="footer-info">
+
+        <strong>Международный тендерный портал</strong>
+
+        <br>
+
+        <small>© 2026 Все права защищены</small>
+
+        <div class="footer-contact">
+
+          <p>📍 Республика Казахстан, г. Караганда</p>
+
+          <p>ул. Строителей, 33, офис 701</p>
+
+          <p>
+            📞
+            <a href="tel:+77052464479">
+              +7 705 246 44 79
+            </a>
+          </p>
+
+          <p>
+            ✉️
+            <a href="mailto:MTtender@gmail.com">
+              MTtender@gmail.com
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="about.html">
+          О платформе
+        </a>
+
+        <a href="privacy.html">
+          Политика конфиденциальности
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       ОКНО ВХОДА
+  ========================== -->
+
+  <div id="loginModal" class="login-modal">
+
+    <div class="login-modal-content">
+
+      <!-- КНОПКА ЗАКРЫТИЯ -->
+      <button
+        class="login-close"
+        onclick="closeLoginModal()"
+        type="button"
+      >
+        ×
+      </button>
+
+
+      <h2>Вход в личный кабинет</h2>
+
+
+      <div class="login-modal-grid">
+
+
+        <!-- ЛЕВАЯ ЧАСТЬ -->
+        <div class="login-form">
+
+
           <input
-            type="password"
-            id="loginPassword"
-            placeholder="Пароль"
+            type="text"
+            placeholder="Логин или email"
             class="login-input"
           >
 
-          <button
-            type="button"
-            class="show-password-btn"
-            onclick="toggleLoginPassword()"
-          >
-            Показать
-          </button>
-        </div>
 
-        <div class="login-options">
+          <div class="password-row">
 
-          <label class="remember-me">
-            <input type="checkbox">
-            <span>Запомнить меня</span>
-          </label>
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Пароль"
+              class="login-input"
+            >
 
-          <div class="register-link">
-            Если у вас нет аккаунта —
-            <a href="register.html">зарегистрируйтесь</a>
+            <button
+              type="button"
+              class="show-password-btn"
+              onclick="toggleLoginPassword()"
+            >
+              Показать
+            </button>
+
           </div>
 
+
+          <div class="login-options">
+
+
+            <label class="remember-me">
+
+              <input type="checkbox">
+
+              <span>Запомнить меня</span>
+
+            </label>
+
+
+            <div class="register-link">
+
+              Если у вас нет аккаунта —
+
+              <a href="register.html">
+                зарегистрируйтесь
+              </a>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="login-buttons">
+
+            <button
+              type="button"
+              class="login-submit-btn"
+            >
+              Войти
+            </button>
+
+
+            <button
+              type="button"
+              class="forgot-password-btn"
+            >
+              Восстановить пароль
+            </button>
+
+          </div>
+
+
         </div>
 
-        <div class="login-buttons">
-          <button class="login-submit-btn">
-            Войти
+
+        <!-- ПРАВАЯ ЧАСТЬ -->
+        <div class="login-support">
+
+
+          <button
+            type="button"
+            class="egov-btn"
+          >
+            Войти через ЕПЗ
           </button>
 
-          <button class="forgot-password-btn">
-            Восстановить пароль
-          </button>
+
+          <div class="support-box">
+
+            <h3>Поддержка</h3>
+
+            <p>
+              Если у вас возникли вопросы или проблемы
+              с регистрацией и входом в личный кабинет,
+              свяжитесь с нашей службой поддержки.
+            </p>
+
+            <a href="tel:+77052464479">
+              +7 705 246 44 79
+            </a>
+
+          </div>
+
+
         </div>
 
-      </div>
-
-      <!-- Правая часть -->
-      <div class="login-support">
-
-        <button class="egov-btn">
-          Войти через ЕПЗ
-        </button>
-
-        <div class="support-box">
-          <h3>Поддержка</h3>
-
-          <a href="tel:+77052464479">
-            +7 705 246 44 79
-          </a>
-        </div>
 
       </div>
 
     </div>
 
   </div>
-</div>
-  <body>
-<header>
-  <div class="topbar">
-    <div class="brand">
-      <div class="logo">МТ</div>
-      <div class="brand-text">
-        <h1>Международный тендерный портал</h1>
-        <p>Поиск и мониторинг международных закупок</p>
-      </div>
-    </div>
 
-    <nav>
-      <a href="index.html">Главная</a>
-      <a href="tenders.html">Тендеры</a>
-      <a href="projects.html">Проекты</a>
-      <a href="organizations.html">Организации</a>
-      <a href="countries.html">Страны</a>
-      <a href="about.html">О платформе</a>
-    </nav>
-    <div class="header-actions">
-  <a href="login.html" class="login-btn">Войти</a>
 
-  <a href="register.html" class="register-btn">
-    Зарегистрироваться
-  </a>
-  </div>
-</header>
-<section class="hero">
-  <div class="hero-inner">
-    <div class="breadcrumb">Главная</div>
-    <h2>Международный тендерный портал</h2>
-    <p>Поиск, анализ и мониторинг информации о закупках, тендерах и международных проектах.</p>
-  </div>
-</section>
+  <!-- JAVASCRIPT -->
+  <script>
 
-<main>
-  <h2 class="section-title">Добро пожаловать в MT Tender</h2>
-  <p class="section-description">Выберите нужный раздел в меню для поиска тендеров, проектов, организаций и стран.</p>
-</main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-info">
-      <strong>Международный тендерный портал</strong><br>
-      <small>© 2026 Все права защищены</small>
+    function openLoginModal() {
+      document.getElementById("loginModal").style.display = "flex";
+    }
 
-      <div class="footer-contact">
-        <p>📍 Республика Казахстан, г. Караганда</p>
-        <p>ул. Строителей, 33, офис 701</p>
-        <p>📞 <a href="tel:+77052464479">+7 705 246 44 79</a></p>
-        <p>✉️ <a href="mailto:MTtender@gmail.com">MTtender@gmail.com</a></p>
-      </div>
-    </div>
 
-    <div class="footer-links">
-      <a href="about.html">О платформе</a>
-      <a href="privacy.html">Политика конфиденциальности</a>
-    </div>
-  </div>
-</footer>
+    function closeLoginModal() {
+      document.getElementById("loginModal").style.display = "none";
+    }
+
+
+    function toggleLoginPassword() {
+
+      const password =
+        document.getElementById("loginPassword");
+
+      if (password.type === "password") {
+        password.type = "text";
+      } else {
+        password.type = "password";
+      }
+
+    }
+
+
+    // Закрытие окна при клике вне формы
+
+    window.onclick = function(event) {
+
+      const modal =
+        document.getElementById("loginModal");
+
+      if (event.target === modal) {
+        closeLoginModal();
+      }
+
+    };
+
+  </script>
+
+
 </body>
+
 </html>
