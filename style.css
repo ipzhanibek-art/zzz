@@ -514,3 +514,66 @@
     }
 
 }
+/* ========================= */
+/* ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ */
+/* ========================= */
+
+.privacy-page {
+    padding: 45px 20px 70px;
+}
+
+.privacy-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.privacy-block {
+    background: #ffffff;
+
+    border: 1px solid #e3e8ee;
+
+    border-radius: 10px;
+
+    padding: 28px 30px;
+
+    margin-bottom: 22px;
+}
+
+.privacy-block h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.privacy-block p {
+    line-height: 1.75;
+    margin-bottom: 14px;
+}
+
+.privacy-block p:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-block ul {
+    padding-left: 22px;
+}
+
+.privacy-block li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.privacy-block a {
+    color: #1f5f8b;
+}
+
+@media (max-width: 768px) {
+
+    .privacy-page {
+        padding: 30px 15px 50px;
+    }
+
+    .privacy-block {
+        padding: 22px 20px;
+    }
+
+}
