@@ -333,3 +333,36 @@
   margin: 6px 0;
   font-size: 14px;
 }
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.login-btn {
+  padding: 11px 18px;
+  color: #173b58;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.login-btn:hover {
+  background: #f1f5f9;
+}
+
+.register-btn {
+  padding: 11px 20px;
+  background: #008f8f;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 7px;
+}
+
+.register-btn:hover {
+  background: #007777;
+}
