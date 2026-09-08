@@ -3,51 +3,115 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Регистрация | MT Tender</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
+
+<!-- ШАПКА -->
+
 <header>
+
     <div class="topbar">
 
+
         <div class="brand">
-            <div class="logo">MT</div>
+
+            <div class="logo">
+                MT
+            </div>
+
 
             <div class="brand-text">
-                <h1>Международный тендерный портал</h1>
-                <p>Поиск и мониторинг международных закупок</p>
+
+                <h1>
+                    Международный тендерный портал
+                </h1>
+
+                <p>
+                    Поиск и мониторинг международных закупок
+                </p>
+
             </div>
+
         </div>
+
+
 
         <nav>
-            <a href="index.html">Главная</a>
-            <a href="tenders.html">Тендеры</a>
-            <a href="projects.html">Проекты</a>
-            <a href="organizations.html">Организации</a>
-            <a href="countries.html">Страны</a>
-            <a href="about.html">О платформе</a>
+
+            <a href="index.html">
+                Главная
+            </a>
+
+            <a href="tenders.html">
+                Тендеры
+            </a>
+
+            <a href="projects.html">
+                Проекты
+            </a>
+
+            <a href="organizations.html">
+                Организации
+            </a>
+
+            <a href="countries.html">
+                Страны
+            </a>
+
+            <a href="about.html">
+                О платформе
+            </a>
+
         </nav>
 
+
+
         <div class="header-actions">
-            <a href="#" class="login-btn">Войти</a>
+
+            <a
+                href="#"
+                class="login-btn"
+            >
+                Войти
+            </a>
+
         </div>
 
+
     </div>
+
 </header>
 
 
+
+<!-- ОСНОВНАЯ ЧАСТЬ -->
+
 <main class="registration-page">
+
 
     <div class="registration-card">
 
+
+        <!-- ЗАГОЛОВОК -->
+
         <div class="registration-header">
 
-            <h2>Регистрация организации</h2>
+            <h2>
+                Регистрация организации
+            </h2>
+
 
             <p>
                 Создайте аккаунт для доступа к возможностям
@@ -57,90 +121,142 @@
         </div>
 
 
-        <!-- ШАГИ -->
+
+        <!-- ШАГИ РЕГИСТРАЦИИ -->
 
         <div class="registration-steps">
 
-            <div class="step active" id="step-indicator-1">
-                <span>1</span>
-                Пользователь
+
+            <div
+                class="step active"
+                id="step-indicator-1"
+            >
+
+                <span>
+                    1
+                </span>
+
+                Контактное лицо
+
             </div>
+
 
             <div class="step-line"></div>
 
-            <div class="step" id="step-indicator-2">
-                <span>2</span>
+
+            <div
+                class="step"
+                id="step-indicator-2"
+            >
+
+                <span>
+                    2
+                </span>
+
                 Организация
+
             </div>
 
-            <div class="step-line"></div>
-
-            <div class="step" id="step-indicator-3">
-                <span>3</span>
-                Интересы
-            </div>
 
         </div>
 
 
+
+        <!-- ФОРМА -->
+
         <form id="registrationForm">
 
 
+            <!-- ==================== -->
             <!-- ШАГ 1 -->
+            <!-- ==================== -->
 
-            <div class="form-step active-step" id="form-step-1">
+            <div
+                class="form-step active-step"
+                id="form-step-1"
+            >
 
-                <h3>Контактное лицо</h3>
 
+                <h3>
+                    Контактное лицо
+                </h3>
+
+
+                <p class="step-description">
+
+                    Укажите данные представителя вашей организации.
+
+                </p>
+
+
+
+                <!-- ФАМИЛИЯ И ИМЯ -->
 
                 <div class="auth-grid">
 
+
                     <div class="field">
 
-                        <label>Фамилия *</label>
+                        <label>
+                            Фамилия *
+                        </label>
 
                         <input
                             type="text"
                             name="lastName"
-                            placeholder="Фамилия"
+                            placeholder="Введите фамилию"
                             required
                         >
 
                     </div>
+
 
 
                     <div class="field">
 
-                        <label>Имя *</label>
+                        <label>
+                            Имя *
+                        </label>
 
                         <input
                             type="text"
                             name="firstName"
-                            placeholder="Имя"
+                            placeholder="Введите имя"
                             required
                         >
 
                     </div>
 
+
                 </div>
 
 
+
+                <!-- ОТЧЕСТВО -->
+
                 <div class="field">
 
-                    <label>Отчество</label>
+                    <label>
+                        Отчество
+                    </label>
 
                     <input
                         type="text"
                         name="middleName"
-                        placeholder="Отчество (необязательно)"
+                        placeholder="Необязательно"
                     >
 
                 </div>
 
 
+
+                <!-- ДОЛЖНОСТЬ -->
+
                 <div class="field">
 
-                    <label>Должность *</label>
+                    <label>
+                        Должность *
+                    </label>
 
                     <input
                         type="text"
@@ -152,9 +268,14 @@
                 </div>
 
 
+
+                <!-- EMAIL -->
+
                 <div class="field">
 
-                    <label>Электронная почта *</label>
+                    <label>
+                        Электронная почта *
+                    </label>
 
                     <input
                         type="email"
@@ -163,17 +284,25 @@
                         required
                     >
 
+
                     <small class="field-hint">
+
                         На этот адрес будет отправлено письмо
                         для подтверждения аккаунта.
+
                     </small>
 
                 </div>
 
 
+
+                <!-- ТЕЛЕФОН -->
+
                 <div class="field">
 
-                    <label>Телефон *</label>
+                    <label>
+                        Телефон *
+                    </label>
 
                     <input
                         type="tel"
@@ -185,33 +314,50 @@
                 </div>
 
 
-                <div class="field">
 
-                    <label>Пароль *</label>
+                <!-- ПАРОЛЬ -->
 
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="Придумайте пароль"
-                        required
-                    >
+                <div class="auth-grid">
+
+
+                    <div class="field">
+
+                        <label>
+                            Пароль *
+                        </label>
+
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Придумайте пароль"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label>
+                            Подтвердите пароль *
+                        </label>
+
+                        <input
+                            type="password"
+                            name="confirmPassword"
+                            placeholder="Повторите пароль"
+                            required
+                        >
+
+                    </div>
+
 
                 </div>
 
 
-                <div class="field">
 
-                    <label>Подтвердите пароль *</label>
-
-                    <input
-                        type="password"
-                        name="confirmPassword"
-                        placeholder="Повторите пароль"
-                        required
-                    >
-
-                </div>
-
+                <!-- КНОПКА -->
 
                 <div class="step-buttons right">
 
@@ -220,24 +366,48 @@
                         class="next-btn"
                         onclick="nextStep(1)"
                     >
+
                         Продолжить
+
                     </button>
 
                 </div>
 
+
             </div>
 
 
+
+            <!-- ==================== -->
             <!-- ШАГ 2 -->
+            <!-- ==================== -->
 
-            <div class="form-step" id="form-step-2">
+            <div
+                class="form-step"
+                id="form-step-2"
+            >
 
-                <h3>Информация об организации</h3>
 
+                <h3>
+                    Информация об организации
+                </h3>
+
+
+                <p class="step-description">
+
+                    Укажите основные данные вашей организации.
+
+                </p>
+
+
+
+                <!-- НАЗВАНИЕ -->
 
                 <div class="field">
 
-                    <label>Полное название организации *</label>
+                    <label>
+                        Полное название организации *
+                    </label>
 
                     <input
                         type="text"
@@ -249,11 +419,17 @@
                 </div>
 
 
+
+                <!-- БИН И СТРАНА -->
+
                 <div class="auth-grid">
+
 
                     <div class="field">
 
-                        <label>БИН / Регистрационный номер *</label>
+                        <label>
+                            БИН / Регистрационный номер *
+                        </label>
 
                         <input
                             type="text"
@@ -265,36 +441,69 @@
                     </div>
 
 
+
                     <div class="field">
 
-                        <label>Страна *</label>
+                        <label>
+                            Страна *
+                        </label>
 
-                        <select name="country" required>
+                        <select
+                            name="country"
+                            required
+                        >
 
                             <option value="">
                                 Выберите страну
                             </option>
 
-                            <option>Казахстан</option>
-                            <option>Узбекистан</option>
-                            <option>Кыргызстан</option>
-                            <option>Китай</option>
-                            <option>Россия</option>
-                            <option>Турция</option>
-                            <option>Другая страна</option>
+                            <option>
+                                Казахстан
+                            </option>
+
+                            <option>
+                                Узбекистан
+                            </option>
+
+                            <option>
+                                Кыргызстан
+                            </option>
+
+                            <option>
+                                Китай
+                            </option>
+
+                            <option>
+                                Россия
+                            </option>
+
+                            <option>
+                                Турция
+                            </option>
+
+                            <option>
+                                Другая страна
+                            </option>
 
                         </select>
 
                     </div>
 
+
                 </div>
 
 
+
+                <!-- ГОРОД И САЙТ -->
+
                 <div class="auth-grid">
+
 
                     <div class="field">
 
-                        <label>Город *</label>
+                        <label>
+                            Город *
+                        </label>
 
                         <input
                             type="text"
@@ -306,9 +515,12 @@
                     </div>
 
 
+
                     <div class="field">
 
-                        <label>Сайт организации</label>
+                        <label>
+                            Сайт организации
+                        </label>
 
                         <input
                             type="url"
@@ -318,12 +530,18 @@
 
                     </div>
 
+
                 </div>
 
 
+
+                <!-- АДРЕС -->
+
                 <div class="field">
 
-                    <label>Юридический адрес</label>
+                    <label>
+                        Юридический адрес
+                    </label>
 
                     <input
                         type="text"
@@ -334,275 +552,170 @@
                 </div>
 
 
-                <div class="step-buttons">
 
-                    <button
-                        type="button"
-                        class="back-btn"
-                        onclick="previousStep(2)"
-                    >
-                        Назад
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="next-btn"
-                        onclick="nextStep(2)"
-                    >
-                        Продолжить
-                    </button>
-
-                </div>
-
-            </div>
-
-
-            <!-- ШАГ 3 -->
-
-            <div class="form-step" id="form-step-3">
-
-                <h3>Интересы и уведомления</h3>
-
-                <p class="step-description">
-                    Выберите направления, которые интересуют
-                    вашу организацию.
-                </p>
-
-
-                <div class="field">
-
-                    <label>Основная страна поиска *</label>
-
-                    <select name="interestCountry" required>
-
-                        <option value="">
-                            Выберите страну
-                        </option>
-
-                        <option>Казахстан</option>
-                        <option>Узбекистан</option>
-                        <option>Кыргызстан</option>
-                        <option>Китай</option>
-                        <option>Россия</option>
-                        <option>Все страны</option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>Интересующие категории</label>
-
-
-                    <div class="category-list">
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="category"
-                                value="Строительство"
-                            >
-                            Строительство
-                        </label>
-
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="category"
-                                value="Оборудование"
-                            >
-                            Оборудование
-                        </label>
-
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="category"
-                                value="IT"
-                            >
-                            IT и технологии
-                        </label>
-
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="category"
-                                value="Медицина"
-                            >
-                            Медицина
-                        </label>
-
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="category"
-                                value="Транспорт"
-                            >
-                            Транспорт и логистика
-                        </label>
-
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                name="category"
-                                value="Промышленность"
-                            >
-                            Промышленность
-                        </label>
-
-                    </div>
-
-                </div>
-
-
-                <div class="field">
-
-                    <label>Ключевые слова</label>
-
-                    <input
-                        type="text"
-                        name="keywords"
-                        placeholder="Например: оборудование, строительство"
-                    >
-
-                </div>
-
+                <!-- СОГЛАСИЕ -->
 
                 <label class="checkbox-field">
 
-                    <input
-                        type="checkbox"
-                        name="notifications"
-                        checked
-                    >
-
-                    <span>
-                        Получать уведомления о новых тендерах
-                        на электронную почту
-                    </span>
-
-                </label>
-
-
-                <label class="checkbox-field">
 
                     <input
                         type="checkbox"
                         required
                     >
 
+
                     <span>
 
                         Я принимаю
 
                         <a href="privacy.html">
+
                             Политику конфиденциальности
+
                         </a>
 
                     </span>
 
+
                 </label>
 
 
+
+                <!-- КНОПКИ -->
+
                 <div class="step-buttons">
+
 
                     <button
                         type="button"
                         class="back-btn"
-                        onclick="previousStep(3)"
+                        onclick="previousStep(2)"
                     >
+
                         Назад
+
                     </button>
+
 
 
                     <button
                         type="submit"
                         class="register-submit"
                     >
+
                         Зарегистрироваться
+
                     </button>
+
 
                 </div>
 
+
             </div>
+
 
         </form>
 
+
     </div>
+
 
 </main>
 
 
+
+<!-- ПОДВАЛ -->
+
 <footer class="site-footer">
+
 
     <div class="footer-inner">
 
+
         <div class="footer-info">
 
-            <strong>Международный тендерный портал</strong>
+
+            <strong>
+                Международный тендерный портал
+            </strong>
+
 
             <br>
+
 
             <small>
                 © 2026 Все права защищены
             </small>
 
 
+
             <div class="footer-contact">
+
 
                 <p>
                     📍 Республика Казахстан, г. Караганда
                 </p>
 
+
                 <p>
                     ул. Строителей, 33, офис 701
                 </p>
 
+
                 <p>
+
                     📞
+
                     <a href="tel:+77052464479">
                         +7 705 246 44 79
                     </a>
+
                 </p>
 
+
                 <p>
+
                     ✉️
+
                     <a href="mailto:MTtender@gmail.com">
                         MTtender@gmail.com
                     </a>
+
                 </p>
 
+
             </div>
+
 
         </div>
 
 
+
         <div class="footer-links">
+
 
             <a href="about.html">
                 О платформе
             </a>
 
+
             <a href="privacy.html">
                 Политика конфиденциальности
             </a>
 
+
         </div>
 
+
     </div>
+
 
 </footer>
 
 
+
 <script src="main.js"></script>
+
 
 </body>
 </html>
