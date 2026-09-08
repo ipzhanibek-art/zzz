@@ -6,7 +6,90 @@
   <title>Главная | MT Tender</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!-- Окно входа -->
+<div id="loginModal" class="login-modal">
+  <div class="login-modal-content">
+
+    <button class="login-close" onclick="closeLoginModal()">×</button>
+
+    <h2>Вход в личный кабинет</h2>
+
+    <div class="login-modal-grid">
+
+      <!-- Левая часть -->
+      <div class="login-form">
+
+        <input
+          type="text"
+          placeholder="Логин или email"
+          class="login-input"
+        >
+
+        <div class="password-row">
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Пароль"
+            class="login-input"
+          >
+
+          <button
+            type="button"
+            class="show-password-btn"
+            onclick="toggleLoginPassword()"
+          >
+            Показать
+          </button>
+        </div>
+
+        <div class="login-options">
+
+          <label class="remember-me">
+            <input type="checkbox">
+            <span>Запомнить меня</span>
+          </label>
+
+          <div class="register-link">
+            Если у вас нет аккаунта —
+            <a href="register.html">зарегистрируйтесь</a>
+          </div>
+
+        </div>
+
+        <div class="login-buttons">
+          <button class="login-submit-btn">
+            Войти
+          </button>
+
+          <button class="forgot-password-btn">
+            Восстановить пароль
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Правая часть -->
+      <div class="login-support">
+
+        <button class="egov-btn">
+          Войти через ЕПЗ
+        </button>
+
+        <div class="support-box">
+          <h3>Поддержка</h3>
+
+          <a href="tel:+77052464479">
+            +7 705 246 44 79
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+  <body>
 <header>
   <div class="topbar">
     <div class="brand">
