@@ -577,3 +577,229 @@
     }
 
 }
+/* =========================
+   МОДАЛЬНОЕ ОКНО ВХОДА
+========================= */
+
+.login-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 70px;
+}
+
+.login-modal.active {
+  display: flex;
+}
+
+.login-modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 940px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 45px 50px 50px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.login-modal-content h2 {
+  margin: 0 0 35px;
+  font-size: 28px;
+  font-weight: 500;
+  color: #1f2d3d;
+}
+
+.login-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  font-size: 38px;
+  font-weight: 300;
+  cursor: pointer;
+  color: #222;
+}
+
+.login-modal-grid {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: 50px;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-input {
+  width: 100%;
+  height: 34px;
+  border: 1px solid #bfc7cf;
+  padding: 0 12px;
+  box-sizing: border-box;
+  font-size: 15px;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #1d6fa5;
+}
+
+.password-row {
+  display: flex;
+}
+
+.password-row .login-input {
+  border-top: none;
+}
+
+.show-password-btn {
+  margin-top: 0;
+  border: 1px solid #bfc7cf;
+  border-top: none;
+  background: #ffffff;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-options {
+  display: flex;
+  align-items: flex-start;
+  gap: 45px;
+  margin-top: 28px;
+}
+
+.remember-me {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 130px;
+}
+
+.remember-me input {
+  width: 20px;
+  height: 20px;
+}
+
+.register-link {
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 230px;
+}
+
+.register-link a {
+  color: #2d5f9a;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.login-submit-btn {
+  background: #168d87;
+  color: white;
+  border: none;
+  padding: 10px 38px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.login-submit-btn:hover {
+  opacity: 0.9;
+}
+
+.forgot-password-btn {
+  background: #ffffff;
+  border: 1px solid #bfc7cf;
+  padding: 10px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.login-support {
+  border-left: 1px solid #e0e0e0;
+  padding-left: 30px;
+}
+
+.egov-btn {
+  width: 100%;
+  height: 36px;
+  border: 1px solid #bfc7cf;
+  background: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.support-box {
+  margin-top: 15px;
+  padding: 16px;
+  border: 1px dashed #cfd4d8;
+}
+
+.support-box h3 {
+  margin: 0 0 12px;
+  font-size: 17px;
+  color: #263746;
+}
+
+.support-box a {
+  color: #263746;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.support-box a:hover {
+  text-decoration: underline;
+}
+
+
+/* Телефон */
+@media (max-width: 700px) {
+
+  .login-modal {
+    padding-top: 20px;
+    align-items: flex-start;
+  }
+
+  .login-modal-content {
+    width: 95%;
+    padding: 35px 25px;
+  }
+
+  .login-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .login-support {
+    border-left: none;
+    border-top: 1px solid #e0e0e0;
+    padding-left: 0;
+    padding-top: 25px;
+  }
+
+  .login-options {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
